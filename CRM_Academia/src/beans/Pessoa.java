@@ -3,12 +3,37 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package banco_de_dados;
+package beans;
 
-abstract public class Cliente {
-    private String nome, email, num_telefone;
+/**
+ *
+ * @author Rodolfo
+ */
+public abstract class Pessoa {
+    private String nome, email, num_telefone, senha;
     private double matricula;
+    
+    public Pessoa(String nome, String email, String num_tel, String senha, double matricula){
+        this.nome = nome;
+        this.email = email;
+        this.num_telefone = num_tel;
+        this.senha = senha;
+        this.matricula = matricula;
+    } 
+    
+    public String getSenha() {
+        return senha;
+    }
 
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
+    
+    public void gerarMatricula(){
+        
+    }
+    
     public String getNome() {
         return nome;
     }
